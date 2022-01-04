@@ -1,0 +1,16 @@
+{
+    "Users": [
+        {
+            "id": 1,
+            "name": "john",
+            "age": 21,
+            "role": "tester"
+        },
+        {
+            "id": 2,
+            "name": "mathew",
+            "age": 31,
+            "role": "manager"
+        }
+    ]
+}
