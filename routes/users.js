@@ -1,27 +1,46 @@
-const express = require('express');
-const userRouter = express.Router()
+import express from 'express';
+const router = express.Router()
+import { v4 as uuidv4 } from 'uuid';
 
-const path = require('path')
+let users = []
 
-userRouter.get('/', (req, res) => {
-    res.sendFile(path.join(process.cwd(), 'data', 'data.json'))
+router.get('/', (req, res) => {
+    res.send(users)
 })
 
-
-userRouter.route("/:id")
-    .get((req, res) => {
-        res.send(`Get User with ${req.params.id}`)
-    })
-    .put((req, res) => {
-        res.send(`Update User with ${req.params.id}`)
-    })
-    .delete((req, res) => {
-        res.send(`Delete User with ${req.params.id}`)
-    })
-
-userRouter.param("id", (req, res, next, id) => {
-    console.log(id)
-    next()
+router.post('/', (req, res) => {
+    const userDetails = req.body
+    const uniqueID = uuidv4()
+    users.push({ ...userDetails, id: uniqueID })
+    res.send({ ...userDetails, id:uniqueID, message: "record created!!" })
 })
 
-module.exports = userRouter;
+router.get('/:id', (req, res) => {
+    const id = req.params.id;
+    const matchingUser = users.find(user => user.id === id);
+    res.send(matchingUser)
+})
+
+router.delete('/:id', (req, res) => {
+    const { id } = req.params;
+
+    users = users.filter(user => user.id !== id)
+    res.send(`User with ID ${id} record deleted!!!`)
+
+})
+
+router.patch('/:id', (req, res) => {
+    const { id } = req.params;
+    const { name, age, role } = req.body
+    
+    const user = users.find((user) => user.id === id);
+
+    if (name) user.name = name
+    if (age) user.age = age
+    if (role) user.role = role
+
+    res.send({ ...user, message: "record updated!!" })
+
+})
+
+export default router;
