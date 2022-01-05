@@ -37,6 +37,8 @@ npm start
 |    |     └───users.js
 |    └───routes
 |          └───users.js
+├───static
+|    └───constants.js
 ├───tests
 |    ├───payload
 |    |     └───users.js
