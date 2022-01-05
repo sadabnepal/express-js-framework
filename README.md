@@ -32,12 +32,22 @@ npm start
 
 ### Folder structure
 ```
-├───controllers
-|   └───users.js
-├───routes
-|   └───users.js
+├───app
+|    ├───controllers
+|    |     └───users.js
+|    └───routes
+|          └───users.js
+├───tests
+|    ├───payload
+|    |     └───users.js
+|    └───specs
+|          └───users.spec.js
 ├───.gitignore
+├───index.js
 ├───package-lock.json
 ├───package.json
 └───README.md
 ```
+
+### Test report
+![image](https://user-images.githubusercontent.com/65847528/148164798-04a901fe-576d-4aad-a9d0-fbbcf670b905.png)
