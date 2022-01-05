@@ -1,9 +1,7 @@
 import { expect } from 'chai';
-import supertest from 'supertest';
 import { contentTypeJSON, updatePayload, userPayload } from '../payload/users.js';
 import { RECORD_CREATED_MESSAGE, RECORD_UPDATED_MESSAGE, RECORD_DELETED_MESSAGE, WELCOME_MESSAGE } from '../../static/constants.js';
-
-const request = supertest('http://localhost:5000')
+import { request } from '../config/setup.js';
 
 let userID;
 
