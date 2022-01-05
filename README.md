@@ -29,3 +29,15 @@ Start server:
 ```
 npm start
 ```
+
+### Folder structure
+```
+├───controllers
+|   └───users.js
+├───routes
+|   └───users.js
+├───.gitignore
+├───package-lock.json
+├───package.json
+└───README.md
+```
