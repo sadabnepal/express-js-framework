@@ -10,7 +10,7 @@ export const createUser = (req, res) => {
     const user = req.body
     const uniqueID = uuidv4()
     users.push({ ...user, id: uniqueID })
-    res.send({ ...user, id:uniqueID, message: "record created!!" })
+    res.send({ ...user, id: uniqueID, message: "record created!!" })
 }
 
 export const findUserByID = (req, res) => {
@@ -22,7 +22,7 @@ export const findUserByID = (req, res) => {
 export const updateUser = (req, res) => {
     const { id } = req.params;
     const { name, age, role } = req.body
-    
+
     const user = users.find((user) => user.id === id);
     if (name) user.name = name
     if (age) user.age = age
@@ -30,7 +30,7 @@ export const updateUser = (req, res) => {
     res.send({ ...user, message: "record updated!!" })
 }
 
-export const deleteUserById =  (req, res) => {
+export const deleteUserById = (req, res) => {
     const { id } = req.params;
     users = users.filter(user => user.id !== id)
     res.send(`User with ID ${id} record deleted!!!`)
