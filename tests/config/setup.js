@@ -1,5 +1,4 @@
 import supertest from 'supertest'
+import { HOSTNAME, PORT } from '../../common/config.js';
 
-export const PORT = 5000;
-export const BASEURL = `http://localhost:${PORT}`
-export const request = supertest(BASEURL);
+export const request = supertest(`${HOSTNAME}:${PORT}`);

@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import { RECORD_CREATED_MESSAGE, RECORD_UPDATED_MESSAGE, RECORD_DELETED_MESSAGE } from '../../static/constants.js';
+import { RECORD_CREATED_MESSAGE, RECORD_UPDATED_MESSAGE, RECORD_DELETED_MESSAGE } from '../../common/constants.js';
 
 let users = []
 

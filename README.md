@@ -43,13 +43,17 @@ npm test
 |    |     └───users.js
 |    └───routes
 |          └───users.js
-├───static
+├───common
+|    ├───config.js
 |    └───constants.js
 ├───tests
+|    ├───config
+|    |     └───setup.js
 |    ├───payload
 |    |     └───users.js
 |    └───specs
 |          └───users.spec.js
+├───.env
 ├───.gitignore
 ├───index.js
 ├───package-lock.json

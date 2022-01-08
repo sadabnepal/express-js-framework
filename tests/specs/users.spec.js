@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { contentTypeJSON, updateUserPayload, userPayload } from '../payload/users.js';
-import { RECORD_CREATED_MESSAGE, RECORD_UPDATED_MESSAGE, RECORD_DELETED_MESSAGE, WELCOME_MESSAGE } from '../../static/constants.js';
+import { RECORD_CREATED_MESSAGE, RECORD_UPDATED_MESSAGE, RECORD_DELETED_MESSAGE, WELCOME_MESSAGE } from '../../common/constants.js';
 import { request } from '../config/setup.js';
 
 let userID;
