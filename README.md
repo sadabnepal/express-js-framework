@@ -27,7 +27,13 @@ DELETE: /users/:id
 
 Start server:
 ```
+npm run devStart [ only for developement ]
 npm start
+```
+
+Run tests:
+```
+npm test
 ```
 
 ### Folder structure
