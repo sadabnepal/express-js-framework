@@ -8,7 +8,7 @@ export const userPayload = {
     role: faker.name.jobTitle()
 }
 
-export const updatePayload = {
+export const updateUserPayload = {
     name: faker.name.findName(),
     age: faker.datatype.number(30),
     role: faker.name.jobTitle()

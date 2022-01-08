@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { contentTypeJSON, updatePayload, userPayload } from '../payload/users.js';
+import { contentTypeJSON, updateUserPayload, userPayload } from '../payload/users.js';
 import { RECORD_CREATED_MESSAGE, RECORD_UPDATED_MESSAGE, RECORD_DELETED_MESSAGE, WELCOME_MESSAGE } from '../../static/constants.js';
 import { request } from '../config/setup.js';
 
@@ -37,12 +37,12 @@ describe('Test users services', () => {
         expect(response.body.role).to.equal(userPayload.role)
     })
 
-    it('should get update user by /:id', async () => {
-        const response = await request.patch(`/users/${userID}`).send(updatePayload).set(contentTypeJSON)
+    it('should update user by /:id', async () => {
+        const response = await request.patch(`/users/${userID}`).send(updateUserPayload).set(contentTypeJSON)
         expect(response.statusCode).to.equal(200)
-        expect(response.body.name).to.equal(updatePayload.name)
-        expect(response.body.age).to.equal(updatePayload.age)
-        expect(response.body.role).to.equal(updatePayload.role)
+        expect(response.body.name).to.equal(updateUserPayload.name)
+        expect(response.body.age).to.equal(updateUserPayload.age)
+        expect(response.body.role).to.equal(updateUserPayload.role)
         expect(response.body.message).to.equal(RECORD_UPDATED_MESSAGE)
     })
 
