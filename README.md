@@ -38,21 +38,17 @@ npm test
 
 ### Folder structure
 ```
-├───app
-|    ├───controllers
-|    |     └───users.js
-|    └───routes
-|          └───users.js
-├───common
-|    ├───config.js
-|    └───constants.js
-├───tests
-|    ├───config
-|    |     └───setup.js
-|    ├───payload
-|    |     └───users.js
-|    └───specs
-|          └───users.spec.js
+├───src
+|    ├───app
+|    |    ├───controllers
+|    |    ├───routes
+|    |    └───index.js
+|    ├───helper
+|    ├───static
+|    └───tests
+|         ├───config
+|         ├───payload
+|         └───specs
 ├───.env
 ├───.gitignore
 ├───index.js

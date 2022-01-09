@@ -1,8 +1,8 @@
 import express from "express";
 import bodyParser from 'body-parser'
-import userRoutes from "./app/routes/users.js";
-import { WELCOME_MESSAGE } from "./common/constants.js";
-import { HOSTNAME, PORT } from "./common/config.js";
+import userRoutes from "./routes/users.js";
+import { WELCOME_MESSAGE } from "../static/constants.js";
+import { HOSTNAME, PORT } from "../helper/envreader.js";
 
 const app = express();
 
