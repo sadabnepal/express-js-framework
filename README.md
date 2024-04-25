@@ -1,14 +1,14 @@
 <h2 align="center"> ExpressJS API Framework </h2>
 
 ### Requirements:
-[![NodeJs](https://img.shields.io/badge/-NodeJS%20v12%20OR%20later-%23339933?logo=npm)](https://nodejs.org/en/download/)
+[![NodeJs](https://img.shields.io/badge/-NodeJS-grey?logo=node.js)](https://nodejs.org/en/download/)
 [![VSCode](https://img.shields.io/badge/-Visual%20Studio%20Code-%233178C6?logo=visual-studio-code)](https://code.visualstudio.com/download)
 
 ### Getting Started:
 Clone Repository
 ```bash
-1. git clone https://github.com/sadabnepal/ExpressJSFramework.git
-2. Navigate to `ExpressJSFramework`
+1. git clone https://github.com/sadabnepal/expressJs-framework.git
+2. Navigate to `expressJs-framework`
 ```
 
 Install the dependencies:
