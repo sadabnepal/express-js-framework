@@ -7,8 +7,8 @@
 ### Getting Started:
 Clone Repository
 ```bash
-1. git clone https://github.com/sadabnepal/expressJs-framework.git
-2. Navigate to `expressJs-framework`
+1. git clone https://github.com/sadabnepal/express-js-framework.git
+2. Navigate to `express-js-framework`
 ```
 
 Install the dependencies:
